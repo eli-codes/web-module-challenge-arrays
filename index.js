@@ -123,8 +123,8 @@ Use the getFlavorByIndex function below to do the following:
 */
 
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
+function getFlavorByIndex(arr, idx){
+  return arr[idx];
 }
 
 
@@ -143,9 +143,15 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(arr, flavor){
+  for(let i = 0; 1 < arr.length; i++) {
+    if(arr[i] === flavor){
+      arr.splice(i, 1)
+    }
+  }
+  return arr;
 }
+removeFlavorByName(originalFlavors, 'Peach');
 
 
 
@@ -168,8 +174,10 @@ Use the filterByWord function below to do the following:
 */
 
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(arr, flavor){
+  let newArr = [];
+  newArr = arr.filter((word) => word.includes(flavor));
+  return newArr;
 }
 
 
